@@ -88,7 +88,7 @@ const App = () => {
         <div className=" relative ">
           <SyntaxHighlighter
             language="javascript"
-            className="w-[600px] min-h-[300px] text-start rounded-md"
+            className="w-[600px] h-[400px] text-start rounded-md"
             style={docco}
           >
             {output || "Converted Karate test will appear here"}
