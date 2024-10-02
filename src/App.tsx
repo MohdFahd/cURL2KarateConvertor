@@ -77,14 +77,13 @@ const App = () => {
         <h1 className="text-4xl text-black font-bold">Karate Convertor</h1>
       </div>
 
-      <div className="flex justify-center gap-4">
-        <div className="w-[600px]">
+      <div className="flex justify-center gap-4 max-md:flex-col ">
+        <div className="">
           <textarea
-            className="border p-2 bg-[#F8F8FF] text-black w-[600px] font-400 focus:outline-none "
+            className="border p-2 bg-[#F8F8FF] text-black w-[600px] font-400 focus:outline-none h-[380px] max-md:w-full"
             placeholder="Enter your cURL command here"
             value={crulCommand}
             onChange={(e) => setcrulCommand(e.target.value)}
-            rows={15}
           />
           <div className="flex items-start text-yellow-500 font-bold">
             ⁉
@@ -98,7 +97,7 @@ const App = () => {
         <div className=" relative ">
           <SyntaxHighlighter
             language="javascript"
-            className="w-[600px] h-[380px] text-start rounded-md"
+            className="md:w-[600px] h-[380px] text-start rounded-md"
             style={docco}
           >
             {output || "Converted Karate test will appear here"}
