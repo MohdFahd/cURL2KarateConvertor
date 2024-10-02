@@ -78,17 +78,27 @@ const App = () => {
       </div>
 
       <div className="flex justify-center gap-4">
-        <textarea
-          className="border p-2 bg-[#F8F8FF] text-black w-[600px] font-400 focus:outline-none "
-          placeholder="Enter your cURL command here"
-          value={crulCommand}
-          onChange={(e) => setcrulCommand(e.target.value)}
-        />
+        <div className="w-[600px]">
+          <textarea
+            className="border p-2 bg-[#F8F8FF] text-black w-[600px] font-400 focus:outline-none "
+            placeholder="Enter your cURL command here"
+            value={crulCommand}
+            onChange={(e) => setcrulCommand(e.target.value)}
+            rows={15}
+          />
+          <div className="flex items-start text-yellow-500 font-bold">
+            ⁉
+            <p>
+              <span>*Note: </span>
+              You have to copy the cURL command from Postman.
+            </p>
+          </div>
+        </div>
 
         <div className=" relative ">
           <SyntaxHighlighter
             language="javascript"
-            className="w-[600px] h-[400px] text-start rounded-md"
+            className="w-[600px] h-[380px] text-start rounded-md"
             style={docco}
           >
             {output || "Converted Karate test will appear here"}
